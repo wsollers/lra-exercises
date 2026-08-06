@@ -1,0 +1,585 @@
+\documentclass[11pt,oneside]{book}
+\usepackage[letterpaper,margin=0.72in,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{array,booktabs,longtable,tabularx}
+\usepackage{enumitem,multicol}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\definecolor{navy}{HTML}{29465B}
+\definecolor{steel}{HTML}{788B99}
+\definecolor{pale}{HTML}{EEF3F7}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={Limits Drill Sheet},pdfauthor={OpenAI}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Limits Drill Sheet}
+\fancyhead[R]{\small \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\small Limits Drill Sheet}\fancyhead[R]{\small \thepage}\renewcommand{\headrulewidth}{0.4pt}}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{\Large Topic \thechapter}{0.35em}{\Huge}
+\titlespacing*{\chapter}{0pt}{-15pt}{20pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep}
+\newenvironment{rulebox}[1]{\par\medskip\noindent{\color{navy}\bfseries #1}\par\noindent{\color{navy}\hrule}\smallskip}{\par\smallskip\noindent{\color{navy}\hrule}\par\medskip}
+\newenvironment{examplebox}[1]{\par\medskip\noindent{\color{steel}\bfseries #1}\par\noindent{\color{steel}\hrule}\smallskip}{\par\smallskip\noindent{\color{steel}\hrule}\par\medskip}
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\centering
+\vspace*{0.8in}
+{\Huge\bfseries Limits Drill Sheet\par}
+\vspace{0.25in}
+{\LARGE First Calculus Practice: Substitution, Algebra, Factoring, and One-Sided Limits\par}
+\vspace{0.45in}
+{\Large 300 progressively harder exercises: 50 per topic\par}
+\vfill
+\begin{rulebox}{Purpose}
+This drill packet gives first-time calculus students repeated practice recognizing the form of a limit, choosing the correct algebraic move, and deciding when a two-sided limit exists. Each topic has fifty problems in five levels.
+\end{rulebox}
+\vfill
+{\large Printable drill-sheet edition\par}
+\end{titlepage}
+\tableofcontents
+\mainmatter
+
+\chapter{Basic Plug-and-Chug Limits}
+\begin{rulebox}{Learning target}
+Evaluate limits of polynomial and simple algebraic expressions by direct substitution.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} $\displaystyle \lim_{x\to 2}(3x^2-4x+1)$
+
+\textbf{Move.} Substitute $x=2$ because polynomials are continuous.
+
+\textbf{Result.} $3(2)^2-4(2)+1=5$.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} x - 4$
+\item $\displaystyle \lim_{x \to -2} 2 x - 3$
+\item $\displaystyle \lim_{x \to -1} 3 x - 2$
+\item $\displaystyle \lim_{x \to 0} 4 x - 1$
+\item $\displaystyle \lim_{x \to 1} x$
+\item $\displaystyle \lim_{x \to 2} 2 x + 1$
+\item $\displaystyle \lim_{x \to 3} 3 x + 2$
+\item $\displaystyle \lim_{x \to 4} 4 x + 3$
+\item $\displaystyle \lim_{x \to -4} x + 4$
+\item $\displaystyle \lim_{x \to 5} 2 x + 5$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} x^{2} + 2 x - 3$
+\item $\displaystyle \lim_{x \to -2} 2 x^{2} + x - 2$
+\item $\displaystyle \lim_{x \to -1} 3 x^{2} - 1$
+\item $\displaystyle \lim_{x \to 0} x^{2} - x$
+\item $\displaystyle \lim_{x \to 1} 2 x^{2} - 2 x + 1$
+\item $\displaystyle \lim_{x \to 2} 3 x^{2} + 2 x + 2$
+\item $\displaystyle \lim_{x \to 3} x^{2} + x + 3$
+\item $\displaystyle \lim_{x \to 4} 2 x^{2} - 3$
+\item $\displaystyle \lim_{x \to -4} 3 x^{2} - x - 2$
+\item $\displaystyle \lim_{x \to 5} x^{2} - 2 x - 1$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} x^{2} + 7 x + 9$
+\item $\displaystyle \lim_{x \to -2} x^{2} + 6 x + 3$
+\item $\displaystyle \lim_{x \to -1} x^{2} + 5 x - 1$
+\item $\displaystyle \lim_{x \to 0} x^{2} + 4 x - 3$
+\item $\displaystyle \lim_{x \to 1} x^{2} + 3 x + 1$
+\item $\displaystyle \lim_{x \to 2} x^{2} - 3 x + 3$
+\item $\displaystyle \lim_{x \to 3} x^{2} - 4 x + 7$
+\item $\displaystyle \lim_{x \to 4} x^{2} - 5 x + 13$
+\item $\displaystyle \lim_{x \to -4} x^{2} + 12 x + 16$
+\item $\displaystyle \lim_{x \to 5} x^{2} - 5 x + 24$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} x^{3} + 2 x - 7$
+\item $\displaystyle \lim_{x \to -2} 2 x^{3} - x^{2} + 3 x - 7$
+\item $\displaystyle \lim_{x \to -1} x^{3} - 2 x^{2} + 4 x - 7$
+\item $\displaystyle \lim_{x \to 0} 2 x^{3} - 3 x^{2} + 5 x - 7$
+\item $\displaystyle \lim_{x \to 1} x^{3} - 4 x^{2} + 2 x - 7$
+\item $\displaystyle \lim_{x \to 2} 2 x^{3} + 3 x - 7$
+\item $\displaystyle \lim_{x \to 3} x^{3} - x^{2} + 4 x - 7$
+\item $\displaystyle \lim_{x \to 4} 2 x^{3} - 2 x^{2} + 5 x - 7$
+\item $\displaystyle \lim_{x \to -4} x^{3} - 3 x^{2} + 2 x - 7$
+\item $\displaystyle \lim_{x \to 5} 2 x^{3} - 4 x^{2} + 3 x - 7$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} x^{3} + 5 x^{2} + 14 x + 7$
+\item $\displaystyle \lim_{x \to -2} 2 x^{3} + 10 x^{2} + 28 x + 15$
+\item $\displaystyle \lim_{x \to -1} 3 x^{3} + 15 x^{2} + 42 x + 23$
+\item $\displaystyle \lim_{x \to 0} x^{3} + 2 x^{2} + 20 x + 7$
+\item $\displaystyle \lim_{x \to 1} 2 x^{3} + 11 x^{2} + 26 x + 19$
+\item $\displaystyle \lim_{x \to 2} 3 x^{3} + 16 x^{2} + 40 x + 27$
+\item $\displaystyle \lim_{x \to 3} x^{3} + 3 x^{2} + 18 x + 11$
+\item $\displaystyle \lim_{x \to 4} 2 x^{3} + 8 x^{2} + 32 x + 19$
+\item $\displaystyle \lim_{x \to -4} 3 x^{3} + 17 x^{2} + 38 x + 31$
+\item $\displaystyle \lim_{x \to 5} x^{3} + 4 x^{2} + 16 x + 15$
+\end{enumerate}
+\end{multicols}
+
+\chapter{Rational Expressions by Direct Substitution}
+\begin{rulebox}{Learning target}
+Evaluate rational limits when the denominator is not zero at the target value.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} $\displaystyle \lim_{x\to -1}\frac{x^2+3x+5}{x+4}$
+
+\textbf{Move.} Substitute because the denominator becomes $3$, not $0$.
+
+\textbf{Result.} $\frac{1-3+5}{3}=1$.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} \frac{x - 3}{x + 10}$
+\item $\displaystyle \lim_{x \to -2} \frac{2 x - 2}{x + 11}$
+\item $\displaystyle \lim_{x \to -1} \frac{3 x - 1}{x + 12}$
+\item $\displaystyle \lim_{x \to 0} \frac{4 x}{x + 13}$
+\item $\displaystyle \lim_{x \to 1} \frac{x + 1}{x + 14}$
+\item $\displaystyle \lim_{x \to 2} \frac{2 x + 2}{x + 15}$
+\item $\displaystyle \lim_{x \to 3} \frac{3 x + 3}{x + 16}$
+\item $\displaystyle \lim_{x \to 4} \frac{4 x + 4}{x + 17}$
+\item $\displaystyle \lim_{x \to -4} \frac{x + 5}{x + 18}$
+\item $\displaystyle \lim_{x \to 5} \frac{2 x + 6}{x + 19}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} \frac{x^{2} - 2 x + 3}{x - 1}$
+\item $\displaystyle \lim_{x \to -2} \frac{2 x^{2} - x + 3}{x - 3}$
+\item $\displaystyle \lim_{x \to -1} \frac{3 x^{2} + 3}{x - 5}$
+\item $\displaystyle \lim_{x \to 0} \frac{x^{2} + x + 3}{x - 7}$
+\item $\displaystyle \lim_{x \to 1} \frac{2 x^{2} + 2 x + 3}{x - 9}$
+\item $\displaystyle \lim_{x \to 2} \frac{3 x^{2} - 2 x + 3}{x - 11}$
+\item $\displaystyle \lim_{x \to 3} \frac{x^{2} - x + 3}{x - 13}$
+\item $\displaystyle \lim_{x \to 4} \frac{2 x^{2} + 3}{x - 15}$
+\item $\displaystyle \lim_{x \to -4} \frac{3 x^{2} + x + 3}{x - 8}$
+\item $\displaystyle \lim_{x \to 5} \frac{x^{2} + 2 x + 3}{x - 18}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} \frac{x^{2} + 3 x + 2}{x^{2} + x - 56}$
+\item $\displaystyle \lim_{x \to -2} \frac{x^{2} + 3 x + 2}{x^{2} + x - 72}$
+\item $\displaystyle \lim_{x \to -1} \frac{x^{2} + 3 x}{x^{2} + x - 90}$
+\item $\displaystyle \lim_{x \to 0} \frac{x^{2} + 6 x + 8}{x^{2} + x - 110}$
+\item $\displaystyle \lim_{x \to 1} \frac{x^{2} + 2 x + 1}{x^{2} + 5 x - 84}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{2} + 2 x}{x^{2} - 64}$
+\item $\displaystyle \lim_{x \to 3} \frac{x^{2} + 5 x + 6}{x^{2} - 81}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{2} + 5 x + 4}{x^{2} - 100}$
+\item $\displaystyle \lim_{x \to -4} \frac{x^{2} + x}{x^{2} + 4 x - 77}$
+\item $\displaystyle \lim_{x \to 5} \frac{x^{2} + 4 x + 4}{x^{2} + 4 x - 96}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} \frac{\frac{x + 1}{x + 8}}{\frac{x - 2}{x + 11}}$
+\item $\displaystyle \lim_{x \to -2} \frac{\frac{2 x + 1}{x + 9}}{\frac{x - 2}{x + 12}}$
+\item $\displaystyle \lim_{x \to -1} \frac{\frac{3 x + 1}{x + 10}}{\frac{x - 2}{x + 13}}$
+\item $\displaystyle \lim_{x \to 0} \frac{\frac{x + 1}{x + 11}}{\frac{x - 2}{x + 14}}$
+\item $\displaystyle \lim_{x \to 1} \frac{\frac{2 x + 1}{x + 12}}{\frac{x - 2}{x + 15}}$
+\item $\displaystyle \lim_{x \to 2} \frac{\frac{3 x + 1}{x + 13}}{\frac{x - 2}{x + 16}}$
+\item $\displaystyle \lim_{x \to 3} \frac{\frac{x + 1}{x + 14}}{\frac{x - 2}{x + 11}}$
+\item $\displaystyle \lim_{x \to 4} \frac{\frac{2 x + 1}{x + 15}}{\frac{x - 2}{x + 12}}$
+\item $\displaystyle \lim_{x \to -4} \frac{\frac{3 x + 1}{x + 16}}{\frac{x - 2}{x + 13}}$
+\item $\displaystyle \lim_{x \to 5} \frac{\frac{x + 1}{x + 17}}{\frac{x - 2}{x + 14}}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to -3} \frac{x^{3} - 2 x - 5}{x^{2} + 8 x + 30}$
+\item $\displaystyle \lim_{x \to -2} \frac{2 x^{3} - 2 x - 4}{x^{2} + 9 x + 31}$
+\item $\displaystyle \lim_{x \to -1} \frac{3 x^{3} - 2 x - 3}{x^{2} + 10 x + 32}$
+\item $\displaystyle \lim_{x \to 0} \frac{x^{3} - 2 x - 2}{x^{2} + 11 x + 33}$
+\item $\displaystyle \lim_{x \to 1} \frac{2 x^{3} - 2 x - 1}{x^{2} + 8 x + 34}$
+\item $\displaystyle \lim_{x \to 2} \frac{3 x^{3} - 2 x}{x^{2} + 9 x + 35}$
+\item $\displaystyle \lim_{x \to 3} \frac{x^{3} - 2 x + 1}{x^{2} + 10 x + 36}$
+\item $\displaystyle \lim_{x \to 4} \frac{2 x^{3} - 2 x + 2}{x^{2} + 11 x + 37}$
+\item $\displaystyle \lim_{x \to -4} \frac{3 x^{3} - 2 x + 3}{x^{2} + 8 x + 38}$
+\item $\displaystyle \lim_{x \to 5} \frac{x^{3} - 2 x + 4}{x^{2} + 9 x + 39}$
+\end{enumerate}
+\end{multicols}
+
+\chapter{Factoring and Cancellation Limits}
+\begin{rulebox}{Learning target}
+Handle $0/0$ rational limits by factoring completely, cancelling common factors, and then substituting.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} $\displaystyle \lim_{x\to 3}\frac{x^2-9}{x-3}$
+
+\textbf{Move.} Factor $x^2-9=(x-3)(x+3)$, cancel the common factor, then substitute.
+
+\textbf{Result.} $6$.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to 3} \frac{x^{2} - 9}{x - 3}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{2} - 16}{x - 4}$
+\item $\displaystyle \lim_{x \to -5} \frac{x^{2} - 25}{x + 5}$
+\item $\displaystyle \lim_{x \to -2} \frac{x^{2} + 5 x + 6}{x + 2}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{2} - x - 12}{x - 4}$
+\item $\displaystyle \lim_{x \to -3} \frac{2 x^{2} + 7 x + 3}{x + 3}$
+\item $\displaystyle \lim_{x \to 4} \frac{3 x^{2} - 11 x - 4}{x - 4}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{3} - 8}{x - 2}$
+\item $\displaystyle \lim_{x \to -3} \frac{x^{3} + 27}{x + 3}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{4} - 16}{x - 2}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to 3} \frac{x^{3} - 2 x^{2} - 9 x + 18}{x^{2} + 4 x - 21}$
+\item $\displaystyle \lim_{x \to 4} \frac{2 x^{3} - x^{2} - 32 x + 16}{x^{2} + 4 x - 32}$
+\item $\displaystyle \lim_{x \to -5} \frac{3 x^{3} - 75 x}{x^{2} + 14 x + 45}$
+\item $\displaystyle \lim_{x \to -2} \frac{x^{3} + 6 x^{2} + 11 x + 6}{x^{2} + 12 x + 20}$
+\item $\displaystyle \lim_{x \to 4} \frac{2 x^{3} - 26 x - 24}{x^{2} + 3 x - 28}$
+\item $\displaystyle \lim_{x \to -3} \frac{6 x^{3} + 27 x^{2} + 30 x + 9}{x^{2} + 11 x + 24}$
+\item $\displaystyle \lim_{x \to 4} \frac{3 x^{3} + x^{2} - 48 x - 16}{x^{2} + 5 x - 36}$
+\item $\displaystyle \lim_{x \to 2} \frac{2 x^{4} + 5 x^{3} - 16 x - 40}{x^{2} + 8 x - 20}$
+\item $\displaystyle \lim_{x \to -3} \frac{3 x^{4} + 6 x^{3} + 81 x + 162}{x^{2} + 10 x + 21}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{5} + 7 x^{4} - 16 x - 112}{x^{2} + 6 x - 16}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to 3} \frac{x^{3} - 2 x^{2} - 6 x + 9}{x^{3} + 6 x^{2} - 9 x - 54}$
+\item $\displaystyle \lim_{x \to 4} \frac{2 x^{3} - 7 x^{2} - 7 x + 12}{x^{3} + 5 x^{2} - 16 x - 80}$
+\item $\displaystyle \lim_{x \to -5} \frac{3 x^{3} + 16 x^{2} + 2 x - 15}{x^{3} + 4 x^{2} - 25 x - 100}$
+\item $\displaystyle \lim_{x \to -2} \frac{4 x^{3} + 9 x^{2} - x - 6}{x^{3} + 8 x^{2} + 21 x + 18}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} - 3 x^{2} - 7 x + 12}{x^{3} + x^{2} - 14 x - 24}$
+\item $\displaystyle \lim_{x \to -3} \frac{2 x^{3} + 7 x^{2} - 9}{2 x^{3} + 19 x^{2} + 45 x + 18}$
+\item $\displaystyle \lim_{x \to 4} \frac{3 x^{3} - 11 x^{2} - 7 x + 12}{3 x^{3} + 4 x^{2} - 59 x - 20}$
+\item $\displaystyle \lim_{x \to 2} \frac{4 x^{3} - 7 x^{2} - 5 x + 6}{x^{4} + 4 x^{3} - 8 x - 32}$
+\item $\displaystyle \lim_{x \to -3} \frac{x^{3} + 4 x^{2} - 9}{x^{4} + 3 x^{3} + 27 x + 81}$
+\item $\displaystyle \lim_{x \to 2} \frac{2 x^{3} - 3 x^{2} - 5 x + 6}{x^{5} + 2 x^{4} - 16 x - 32}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to 3} \frac{x^{3} + x^{2} - 9 x - 9}{x^{3} - x^{2} - 5 x - 3}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} + 2 x^{2} - 16 x - 32}{x^{3} - x^{2} - 11 x - 4}$
+\item $\displaystyle \lim_{x \to -5} \frac{x^{3} + 3 x^{2} - 25 x - 75}{x^{3} + 9 x^{2} + 21 x + 5}$
+\item $\displaystyle \lim_{x \to -2} \frac{x^{3} + 9 x^{2} + 26 x + 24}{x^{3} + 7 x^{2} + 11 x + 2}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} + 4 x^{2} - 17 x - 60}{x^{3} - 2 x^{2} - 7 x - 4}$
+\item $\displaystyle \lim_{x \to -3} \frac{2 x^{3} + 9 x^{2} + 10 x + 3}{x^{3} + 6 x^{2} + 10 x + 3}$
+\item $\displaystyle \lim_{x \to 4} \frac{3 x^{3} - 5 x^{2} - 26 x - 8}{x^{3} - 15 x - 4}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{4} + 3 x^{3} - 8 x - 24}{x^{3} + 3 x^{2} - 9 x - 2}$
+\item $\displaystyle \lim_{x \to -3} \frac{x^{4} + 4 x^{3} + 27 x + 108}{x^{3} + 5 x^{2} + 7 x + 3}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{5} + 5 x^{4} - 16 x - 80}{x^{3} + x^{2} - 5 x - 2}$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $\displaystyle \lim_{x \to 3} \frac{x^{3} - 2 x^{2} - 5 x + 6}{x^{3} + 5 x^{2} - 9 x - 45}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} - 3 x^{2} - 10 x + 24}{x^{3} + 6 x^{2} - 16 x - 96}$
+\item $\displaystyle \lim_{x \to -5} \frac{x^{3} + 6 x^{2} - 7 x - 60}{x^{3} + 7 x^{2} - 25 x - 175}$
+\item $\displaystyle \lim_{x \to -2} \frac{x^{3} + 6 x^{2} + 3 x - 10}{x^{3} + 13 x^{2} + 46 x + 48}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} - 4 x^{2} - 4 x + 16}{x^{3} + 8 x^{2} - 21 x - 108}$
+\item $\displaystyle \lim_{x \to -3} \frac{x^{3} + 3 x^{2} - 9 x - 27}{2 x^{3} + 27 x^{2} + 73 x + 30}$
+\item $\displaystyle \lim_{x \to 4} \frac{x^{3} - x^{2} - 16 x + 16}{3 x^{3} + 4 x^{2} - 59 x - 20}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{3} + x^{2} - 16 x + 20}{x^{4} + 6 x^{3} - 8 x - 48}$
+\item $\displaystyle \lim_{x \to -3} \frac{x^{3} + 2 x^{2} - 9 x - 18}{x^{4} + 7 x^{3} + 27 x + 189}$
+\item $\displaystyle \lim_{x \to 2} \frac{x^{3} - 7 x + 6}{x^{5} + 8 x^{4} - 16 x - 128}$
+\end{enumerate}
+\end{multicols}
+
+\chapter{Left and Right Limits}
+\begin{rulebox}{Learning target}
+Evaluate left-hand and right-hand limits of piecewise functions by using the rule on the correct side of the target.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} If $f(x)=\begin{cases}x+1,&x<2\\3x,&x>2\end{cases}$, find both one-sided limits at $x=2$.
+
+\textbf{Result.} $\lim_{x\to2^-}f(x)=3$ and $\lim_{x\to2^+}f(x)=6$.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} x, & x<-3\\ 2 x, & x>-3 \end{cases}$; find $\lim_{x\to -3^-}f(x)$ and $\lim_{x\to -3^+}f(x)$
+\item $f(x)=\begin{cases} x + 1, & x<-2\\ 2 x - 1, & x>-2 \end{cases}$; find $\lim_{x\to -2^-}f(x)$ and $\lim_{x\to -2^+}f(x)$
+\item $f(x)=\begin{cases} x + 2, & x<-1\\ 2 x - 2, & x>-1 \end{cases}$; find $\lim_{x\to -1^-}f(x)$ and $\lim_{x\to -1^+}f(x)$
+\item $f(x)=\begin{cases} x + 3, & x<0\\ 2 x - 3, & x>0 \end{cases}$; find $\lim_{x\to 0^-}f(x)$ and $\lim_{x\to 0^+}f(x)$
+\item $f(x)=\begin{cases} x + 4, & x<1\\ 2 x - 4, & x>1 \end{cases}$; find $\lim_{x\to 1^-}f(x)$ and $\lim_{x\to 1^+}f(x)$
+\item $f(x)=\begin{cases} x + 5, & x<2\\ 2 x - 5, & x>2 \end{cases}$; find $\lim_{x\to 2^-}f(x)$ and $\lim_{x\to 2^+}f(x)$
+\item $f(x)=\begin{cases} x + 6, & x<3\\ 2 x - 6, & x>3 \end{cases}$; find $\lim_{x\to 3^-}f(x)$ and $\lim_{x\to 3^+}f(x)$
+\item $f(x)=\begin{cases} x + 7, & x<4\\ 2 x - 7, & x>4 \end{cases}$; find $\lim_{x\to 4^-}f(x)$ and $\lim_{x\to 4^+}f(x)$
+\item $f(x)=\begin{cases} x + 8, & x<-4\\ 2 x - 8, & x>-4 \end{cases}$; find $\lim_{x\to -4^-}f(x)$ and $\lim_{x\to -4^+}f(x)$
+\item $f(x)=\begin{cases} x + 9, & x<5\\ 2 x - 9, & x>5 \end{cases}$; find $\lim_{x\to 5^-}f(x)$ and $\lim_{x\to 5^+}f(x)$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} x^{2}, & x<-3\\ - x, & x>-3 \end{cases}$; find both one-sided limits at $x=-3$
+\item $f(x)=\begin{cases} x^{2} + 1, & x<-2\\ 3 - x, & x>-2 \end{cases}$; find both one-sided limits at $x=-2$
+\item $f(x)=\begin{cases} x^{2} + 2, & x<-1\\ 6 - x, & x>-1 \end{cases}$; find both one-sided limits at $x=-1$
+\item $f(x)=\begin{cases} x^{2} + 3, & x<0\\ 9 - x, & x>0 \end{cases}$; find both one-sided limits at $x=0$
+\item $f(x)=\begin{cases} x^{2} + 4, & x<1\\ 12 - x, & x>1 \end{cases}$; find both one-sided limits at $x=1$
+\item $f(x)=\begin{cases} x^{2} + 5, & x<2\\ 15 - x, & x>2 \end{cases}$; find both one-sided limits at $x=2$
+\item $f(x)=\begin{cases} x^{2} + 6, & x<3\\ 18 - x, & x>3 \end{cases}$; find both one-sided limits at $x=3$
+\item $f(x)=\begin{cases} x^{2} + 7, & x<4\\ 21 - x, & x>4 \end{cases}$; find both one-sided limits at $x=4$
+\item $f(x)=\begin{cases} x^{2} + 8, & x<-4\\ 24 - x, & x>-4 \end{cases}$; find both one-sided limits at $x=-4$
+\item $f(x)=\begin{cases} x^{2} + 9, & x<5\\ 27 - x, & x>5 \end{cases}$; find both one-sided limits at $x=5$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} \frac{x^{2} - 9}{x + 3}, & x<-3\\ x + 2, & x>-3 \end{cases}$; find both one-sided limits at $x=-3$
+\item $f(x)=\begin{cases} \frac{x^{2} - 4}{x + 2}, & x<-2\\ 2 x + 2, & x>-2 \end{cases}$; find both one-sided limits at $x=-2$
+\item $f(x)=\begin{cases} \frac{x^{2} - 1}{x + 1}, & x<-1\\ 3 x + 2, & x>-1 \end{cases}$; find both one-sided limits at $x=-1$
+\item $f(x)=\begin{cases} \frac{x^{2} + x}{x}, & x<0\\ x + 2, & x>0 \end{cases}$; find both one-sided limits at $x=0$
+\item $f(x)=\begin{cases} \frac{x^{2} - 1}{x - 1}, & x<1\\ 2 x + 2, & x>1 \end{cases}$; find both one-sided limits at $x=1$
+\item $f(x)=\begin{cases} \frac{x^{2} - 4}{x - 2}, & x<2\\ 3 x + 2, & x>2 \end{cases}$; find both one-sided limits at $x=2$
+\item $f(x)=\begin{cases} \frac{x^{2} - 9}{x - 3}, & x<3\\ x + 2, & x>3 \end{cases}$; find both one-sided limits at $x=3$
+\item $f(x)=\begin{cases} \frac{x^{2} - 16}{x - 4}, & x<4\\ 2 x + 2, & x>4 \end{cases}$; find both one-sided limits at $x=4$
+\item $f(x)=\begin{cases} \frac{x^{2} - 16}{x + 4}, & x<-4\\ 3 x + 2, & x>-4 \end{cases}$; find both one-sided limits at $x=-4$
+\item $f(x)=\begin{cases} \frac{x^{2} - 25}{x - 5}, & x<5\\ x + 2, & x>5 \end{cases}$; find both one-sided limits at $x=5$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} x^{2} + 6 x + 9, & x<-3\\ \frac{x^{2} + 2 x + 1}{x + 9}, & x>-3 \end{cases}$; find $\lim_{x\to -3^-}f(x)$ and $\lim_{x\to -3^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} + 4 x + 5, & x<-2\\ \frac{x^{2} + x + 1}{x + 10}, & x>-2 \end{cases}$; find $\lim_{x\to -2^-}f(x)$ and $\lim_{x\to -2^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} + 2 x + 3, & x<-1\\ \frac{x^{2} + 1}{x + 11}, & x>-1 \end{cases}$; find $\lim_{x\to -1^-}f(x)$ and $\lim_{x\to -1^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} + 3, & x<0\\ \frac{x^{2} - x + 1}{x + 12}, & x>0 \end{cases}$; find $\lim_{x\to 0^-}f(x)$ and $\lim_{x\to 0^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} - 2 x + 5, & x<1\\ \frac{x^{2} + 2 x + 1}{x + 13}, & x>1 \end{cases}$; find $\lim_{x\to 1^-}f(x)$ and $\lim_{x\to 1^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} - 4 x + 9, & x<2\\ \frac{x^{2} + x + 1}{x + 14}, & x>2 \end{cases}$; find $\lim_{x\to 2^-}f(x)$ and $\lim_{x\to 2^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} - 6 x + 15, & x<3\\ \frac{x^{2} + 1}{x + 15}, & x>3 \end{cases}$; find $\lim_{x\to 3^-}f(x)$ and $\lim_{x\to 3^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} - 8 x + 23, & x<4\\ \frac{x^{2} - x + 1}{x + 16}, & x>4 \end{cases}$; find $\lim_{x\to 4^-}f(x)$ and $\lim_{x\to 4^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} + 8 x + 24, & x<-4\\ \frac{x^{2} + 2 x + 1}{x + 17}, & x>-4 \end{cases}$; find $\lim_{x\to -4^-}f(x)$ and $\lim_{x\to -4^+}f(x)$
+\item $f(x)=\begin{cases} x^{2} - 10 x + 34, & x<5\\ \frac{x^{2} + x + 1}{x + 18}, & x>5 \end{cases}$; find $\lim_{x\to 5^-}f(x)$ and $\lim_{x\to 5^+}f(x)$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x + 3}{x + 3}, & x<-3\\ \frac{2 x^{2} + 6 x}{x + 3}, & x>-3 \end{cases}$; find both one-sided limits at $x=-3$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x + 4}{x + 2}, & x<-2\\ \frac{2 x^{2} + 3 x - 2}{x + 2}, & x>-2 \end{cases}$; find both one-sided limits at $x=-2$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x + 3}{x + 1}, & x<-1\\ \frac{2 x^{2} - 2}{x + 1}, & x>-1 \end{cases}$; find both one-sided limits at $x=-1$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x}{x}, & x<0\\ \frac{2 x^{2} - 3 x}{x}, & x>0 \end{cases}$; find both one-sided limits at $x=0$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x - 5}{x - 1}, & x<1\\ \frac{2 x^{2} - 6 x + 4}{x - 1}, & x>1 \end{cases}$; find both one-sided limits at $x=1$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x - 12}{x - 2}, & x<2\\ \frac{2 x^{2} - 9 x + 10}{x - 2}, & x>2 \end{cases}$; find both one-sided limits at $x=2$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x - 21}{x - 3}, & x<3\\ \frac{2 x^{2} - 12 x + 18}{x - 3}, & x>3 \end{cases}$; find both one-sided limits at $x=3$
+\item $f(x)=\begin{cases} \frac{x^{2} + 4 x - 32}{x - 4}, & x<4\\ \frac{2 x^{2} - 15 x + 28}{x - 4}, & x>4 \end{cases}$; find both one-sided limits at $x=4$
+\item $f(x)=\begin{cases} \frac{x^{2} + 13 x + 36}{x + 4}, & x<-4\\ \frac{2 x^{2} - 32}{x + 4}, & x>-4 \end{cases}$; find both one-sided limits at $x=-4$
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x - 50}{x - 5}, & x<5\\ \frac{2 x^{2} - 19 x + 45}{x - 5}, & x>5 \end{cases}$; find both one-sided limits at $x=5$
+\end{enumerate}
+\end{multicols}
+
+\chapter{One-Sided Limits That Disagree}
+\begin{rulebox}{Learning target}
+Compare one-sided limits and conclude that the two-sided limit does not exist when they disagree.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} If $f(x)=\begin{cases}x,&x<1\\x+4,&x>1\end{cases}$, decide whether $\lim_{x\to1}f(x)$ exists.
+
+\textbf{Result.} The left-hand limit is $1$ and the right-hand limit is $5$, so the two-sided limit does not exist.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} x, & x<-3\\ x + 3, & x>-3 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -3}f(x)$ exists
+\item $f(x)=\begin{cases} x + 1, & x<-2\\ x + 4, & x>-2 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -2}f(x)$ exists
+\item $f(x)=\begin{cases} x + 2, & x<-1\\ x + 5, & x>-1 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -1}f(x)$ exists
+\item $f(x)=\begin{cases} x + 3, & x<0\\ x + 6, & x>0 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 0}f(x)$ exists
+\item $f(x)=\begin{cases} x + 4, & x<1\\ x + 7, & x>1 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 1}f(x)$ exists
+\item $f(x)=\begin{cases} x + 5, & x<2\\ x + 8, & x>2 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 2}f(x)$ exists
+\item $f(x)=\begin{cases} x + 6, & x<3\\ x + 9, & x>3 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 3}f(x)$ exists
+\item $f(x)=\begin{cases} x + 7, & x<4\\ x + 10, & x>4 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 4}f(x)$ exists
+\item $f(x)=\begin{cases} x + 8, & x<-4\\ x + 11, & x>-4 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -4}f(x)$ exists
+\item $f(x)=\begin{cases} x + 9, & x<5\\ x + 12, & x>5 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 5}f(x)$ exists
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} 2 x, & x<-3\\ - x, & x>-3 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-3$
+\item $f(x)=\begin{cases} 2 x - 1, & x<-2\\ 1 - x, & x>-2 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-2$
+\item $f(x)=\begin{cases} 2 x - 2, & x<-1\\ 2 - x, & x>-1 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-1$
+\item $f(x)=\begin{cases} 2 x - 3, & x<0\\ 3 - x, & x>0 \end{cases}$; find both one-sided limits and the two-sided limit at $x=0$
+\item $f(x)=\begin{cases} 2 x - 4, & x<1\\ 4 - x, & x>1 \end{cases}$; find both one-sided limits and the two-sided limit at $x=1$
+\item $f(x)=\begin{cases} 2 x - 5, & x<2\\ 5 - x, & x>2 \end{cases}$; find both one-sided limits and the two-sided limit at $x=2$
+\item $f(x)=\begin{cases} 2 x - 6, & x<3\\ 6 - x, & x>3 \end{cases}$; find both one-sided limits and the two-sided limit at $x=3$
+\item $f(x)=\begin{cases} 2 x - 7, & x<4\\ 7 - x, & x>4 \end{cases}$; find both one-sided limits and the two-sided limit at $x=4$
+\item $f(x)=\begin{cases} 2 x - 8, & x<-4\\ 8 - x, & x>-4 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-4$
+\item $f(x)=\begin{cases} 2 x - 9, & x<5\\ 9 - x, & x>5 \end{cases}$; find both one-sided limits and the two-sided limit at $x=5$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x + 6}{x + 3}, & x<-3\\ x + 5, & x>-3 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -3}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x + 6}{x + 2}, & x<-2\\ x + 6, & x>-2 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -2}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x + 4}{x + 1}, & x<-1\\ x + 7, & x>-1 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -1}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x}{x}, & x<0\\ x + 8, & x>0 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 0}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x - 6}{x - 1}, & x<1\\ x + 9, & x>1 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 1}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x - 14}{x - 2}, & x<2\\ x + 10, & x>2 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 2}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x - 24}{x - 3}, & x<3\\ x + 11, & x>3 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 3}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 5 x - 36}{x - 4}, & x<4\\ x + 12, & x>4 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 4}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 14 x + 40}{x + 4}, & x<-4\\ x + 13, & x>-4 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to -4}f(x)$ exists
+\item $f(x)=\begin{cases} \frac{x^{2} + 6 x - 55}{x - 5}, & x<5\\ x + 14, & x>5 \end{cases}$; find both one-sided limits and decide whether $\lim_{x\to 5}f(x)$ exists
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} x^{2} + 6 x + 9, & x<-3\\ x^{2} + 6 x + 13, & x>-3 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-3$
+\item $f(x)=\begin{cases} x^{2} + 4 x + 5, & x<-2\\ x^{2} + 4 x + 9, & x>-2 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-2$
+\item $f(x)=\begin{cases} x^{2} + 2 x + 3, & x<-1\\ x^{2} + 2 x + 7, & x>-1 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-1$
+\item $f(x)=\begin{cases} x^{2} + 3, & x<0\\ x^{2} + 7, & x>0 \end{cases}$; find both one-sided limits and the two-sided limit at $x=0$
+\item $f(x)=\begin{cases} x^{2} - 2 x + 5, & x<1\\ x^{2} - 2 x + 9, & x>1 \end{cases}$; find both one-sided limits and the two-sided limit at $x=1$
+\item $f(x)=\begin{cases} x^{2} - 4 x + 9, & x<2\\ x^{2} - 4 x + 13, & x>2 \end{cases}$; find both one-sided limits and the two-sided limit at $x=2$
+\item $f(x)=\begin{cases} x^{2} - 6 x + 15, & x<3\\ x^{2} - 6 x + 19, & x>3 \end{cases}$; find both one-sided limits and the two-sided limit at $x=3$
+\item $f(x)=\begin{cases} x^{2} - 8 x + 23, & x<4\\ x^{2} - 8 x + 27, & x>4 \end{cases}$; find both one-sided limits and the two-sided limit at $x=4$
+\item $f(x)=\begin{cases} x^{2} + 8 x + 24, & x<-4\\ x^{2} + 8 x + 28, & x>-4 \end{cases}$; find both one-sided limits and the two-sided limit at $x=-4$
+\item $f(x)=\begin{cases} x^{2} - 10 x + 34, & x<5\\ x^{2} - 10 x + 38, & x>5 \end{cases}$; find both one-sided limits and the two-sided limit at $x=5$
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item $f(x)=\begin{cases} \frac{x^{2} - 9}{x + 3}, & x<-3\\ 2 x + 1, & x>-3 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 4}{x + 2}, & x<-2\\ 2 x + 2, & x>-2 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 1}{x + 1}, & x<-1\\ 2 x + 3, & x>-1 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} + x}{x}, & x<0\\ 2 x + 4, & x>0 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 1}{x - 1}, & x<1\\ 2 x + 5, & x>1 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 4}{x - 2}, & x<2\\ 2 x + 6, & x>2 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 9}{x - 3}, & x<3\\ 2 x + 7, & x>3 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 16}{x - 4}, & x<4\\ 2 x + 8, & x>4 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 16}{x + 4}, & x<-4\\ 2 x + 9, & x>-4 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\item $f(x)=\begin{cases} \frac{x^{2} - 25}{x - 5}, & x<5\\ 2 x + 10, & x>5 \end{cases}$; find both one-sided limits and decide whether the limit exists
+\end{enumerate}
+\end{multicols}
+
+\chapter{Limit Algebra Laws and Reciprocals}
+\begin{rulebox}{Learning target}
+Use sum, difference, product, quotient, power, root, and reciprocal limit laws from known component limits.
+\end{rulebox}
+\begin{examplebox}{Worked example}
+\textbf{Problem.} Suppose $\lim_{x\to c} f(x)=2$ and $\lim_{x\to c} g(x)=-3$. Find $\lim_{x\to c}(f(x)g(x)+4)$.
+
+\textbf{Result.} $2(-3)+4=-2$.
+\end{examplebox}
+\section*{Drill}
+\subsection*{Level I: direct recognition}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item Suppose $\lim_{x\to c} f(x)=2$, $\lim_{x\to c} g(x)=-3$, and $\lim_{x\to c} h(x)=4$. Find $\displaystyle\lim_{x\to c} f(x)+g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=-1$, $\lim_{x\to c} g(x)=5$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} f(x)-g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=3$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=-4$. Find $\displaystyle\lim_{x\to c} 3f(x)+2g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=0$, $\lim_{x\to c} g(x)=-2$, and $\lim_{x\to c} h(x)=7$. Find $\displaystyle\lim_{x\to c} f(x)g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=5$, $\lim_{x\to c} g(x)=1$, and $\lim_{x\to c} h(x)=-1$. Find $\displaystyle\lim_{x\to c} \frac{f(x)}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-4$, $\lim_{x\to c} g(x)=3$, and $\lim_{x\to c} h(x)=6$. Find $\displaystyle\lim_{x\to c} \frac{1}{f(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=6$, $\lim_{x\to c} g(x)=-1$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} f(x)^2+g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=1$, $\lim_{x\to c} g(x)=4$, and $\lim_{x\to c} h(x)=-3$. Find $\displaystyle\lim_{x\to c} h(x)-f(x)g(x)$.
+\item Suppose $\lim_{x\to c} f(x)=-2$, $\lim_{x\to c} g(x)=-5$, and $\lim_{x\to c} h(x)=8$. Find $\displaystyle\lim_{x\to c} \frac{f(x)+h(x)}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=7$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=3$. Find $\displaystyle\lim_{x\to c} \frac{g(x)h(x)}{f(x)}$.
+\end{enumerate}
+\end{multicols}
+\subsection*{Level II: routine variations}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item Suppose $\lim_{x\to c} f(x)=2$, $\lim_{x\to c} g(x)=-3$, and $\lim_{x\to c} h(x)=4$. Find $\displaystyle\lim_{x\to c} 2f(x)-3g(x)+h(x)$.
+\item Suppose $\lim_{x\to c} f(x)=-1$, $\lim_{x\to c} g(x)=5$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \frac{h(x)}{g(x)-f(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=3$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=-4$. Find $\displaystyle\lim_{x\to c} \left(f(x)+g(x)\right)^2$.
+\item Suppose $\lim_{x\to c} f(x)=0$, $\lim_{x\to c} g(x)=-2$, and $\lim_{x\to c} h(x)=7$. Find $\displaystyle\lim_{x\to c} \frac{1}{g(x)^2}$.
+\item Suppose $\lim_{x\to c} f(x)=5$, $\lim_{x\to c} g(x)=1$, and $\lim_{x\to c} h(x)=-1$. Find $\displaystyle\lim_{x\to c} f(x)^2-g(x)^2$.
+\item Suppose $\lim_{x\to c} f(x)=-4$, $\lim_{x\to c} g(x)=3$, and $\lim_{x\to c} h(x)=6$. Find $\displaystyle\lim_{x\to c} \frac{f(x)g(x)+h(x)}{2}$.
+\item Suppose $\lim_{x\to c} f(x)=6$, $\lim_{x\to c} g(x)=-1$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \frac{h(x)-g(x)}{f(x)+1}$.
+\item Suppose $\lim_{x\to c} f(x)=1$, $\lim_{x\to c} g(x)=4$, and $\lim_{x\to c} h(x)=-3$. Find $\displaystyle\lim_{x\to c} \frac{f(x)+2}{h(x)-1}$.
+\item Suppose $\lim_{x\to c} f(x)=-2$, $\lim_{x\to c} g(x)=-5$, and $\lim_{x\to c} h(x)=8$. Find $\displaystyle\lim_{x\to c} \frac{f(x)^2+h(x)}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=7$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=3$. Find $\displaystyle\lim_{x\to c} \frac{1}{f(x)g(x)}$.
+\end{enumerate}
+\end{multicols}
+\subsection*{Level III: disguised or prepared forms}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item Suppose $\lim_{x\to c} f(x)=2$, $\lim_{x\to c} g(x)=-3$, and $\lim_{x\to c} h(x)=4$. Find $\displaystyle\lim_{x\to c} \sqrt{h(x)+5}$.
+\item Suppose $\lim_{x\to c} f(x)=-1$, $\lim_{x\to c} g(x)=5$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \sqrt{f(x)^2+g(x)^2}$.
+\item Suppose $\lim_{x\to c} f(x)=3$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=-4$. Find $\displaystyle\lim_{x\to c} \frac{\sqrt{h(x)+12}}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=0$, $\lim_{x\to c} g(x)=-2$, and $\lim_{x\to c} h(x)=7$. Find $\displaystyle\lim_{x\to c} f(x)^3-2h(x)$.
+\item Suppose $\lim_{x\to c} f(x)=5$, $\lim_{x\to c} g(x)=1$, and $\lim_{x\to c} h(x)=-1$. Find $\displaystyle\lim_{x\to c} \frac{4}{h(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-4$, $\lim_{x\to c} g(x)=3$, and $\lim_{x\to c} h(x)=6$. Find $\displaystyle\lim_{x\to c} \frac{f(x)-g(x)}{h(x)+2}$.
+\item Suppose $\lim_{x\to c} f(x)=6$, $\lim_{x\to c} g(x)=-1$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \frac{h(x)^2}{f(x)-g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=1$, $\lim_{x\to c} g(x)=4$, and $\lim_{x\to c} h(x)=-3$. Find $\displaystyle\lim_{x\to c} \frac{f(x)+g(x)+h(x)}{3}$.
+\item Suppose $\lim_{x\to c} f(x)=-2$, $\lim_{x\to c} g(x)=-5$, and $\lim_{x\to c} h(x)=8$. Find $\displaystyle\lim_{x\to c} \left(2f(x)-g(x)\right)h(x)$.
+\item Suppose $\lim_{x\to c} f(x)=7$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=3$. Find $\displaystyle\lim_{x\to c} \frac{1}{h(x)-f(x)}$.
+\end{enumerate}
+\end{multicols}
+\subsection*{Level IV: multi-stage execution}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item Suppose $\lim_{x\to c} f(x)=2$, $\lim_{x\to c} g(x)=-3$, and $\lim_{x\to c} h(x)=4$. Find $\displaystyle\lim_{x\to c} \frac{f(x)^2+g(x)^2}{h(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-1$, $\lim_{x\to c} g(x)=5$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \sqrt{h(x)^2+f(x)^2}$.
+\item Suppose $\lim_{x\to c} f(x)=3$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=-4$. Find $\displaystyle\lim_{x\to c} \frac{g(x)}{f(x)^2+1}$.
+\item Suppose $\lim_{x\to c} f(x)=0$, $\lim_{x\to c} g(x)=-2$, and $\lim_{x\to c} h(x)=7$. Find $\displaystyle\lim_{x\to c} \frac{h(x)-2g(x)}{f(x)+3}$.
+\item Suppose $\lim_{x\to c} f(x)=5$, $\lim_{x\to c} g(x)=1$, and $\lim_{x\to c} h(x)=-1$. Find $\displaystyle\lim_{x\to c} \frac{f(x)h(x)}{g(x)^2}$.
+\item Suppose $\lim_{x\to c} f(x)=-4$, $\lim_{x\to c} g(x)=3$, and $\lim_{x\to c} h(x)=6$. Find $\displaystyle\lim_{x\to c} \frac{1}{\sqrt{h(x)+9}}$.
+\item Suppose $\lim_{x\to c} f(x)=6$, $\lim_{x\to c} g(x)=-1$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \sqrt{f(x)+g(x)+10}$.
+\item Suppose $\lim_{x\to c} f(x)=1$, $\lim_{x\to c} g(x)=4$, and $\lim_{x\to c} h(x)=-3$. Find $\displaystyle\lim_{x\to c} \frac{f(x)^2-g(x)}{h(x)-g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-2$, $\lim_{x\to c} g(x)=-5$, and $\lim_{x\to c} h(x)=8$. Find $\displaystyle\lim_{x\to c} \left(\frac{f(x)}{g(x)}\right)^2$.
+\item Suppose $\lim_{x\to c} f(x)=7$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=3$. Find $\displaystyle\lim_{x\to c} \frac{h(x)+1}{f(x)g(x)-2}$.
+\end{enumerate}
+\end{multicols}
+\subsection*{Level V: independent mastery}
+\begin{multicols}{2}
+\begin{enumerate}[leftmargin=*,label=\textbf{\arabic*.},itemsep=0.65\baselineskip]
+\item Suppose $\lim_{x\to c} f(x)=2$, $\lim_{x\to c} g(x)=-3$, and $\lim_{x\to c} h(x)=4$. Find $\displaystyle\lim_{x\to c} \frac{2}{f(x)}+\frac{3}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-1$, $\lim_{x\to c} g(x)=5$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \frac{f(x)}{g(x)}+\frac{g(x)}{h(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=3$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=-4$. Find $\displaystyle\lim_{x\to c} \frac{h(x)}{f(x)}-\frac{f(x)}{h(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=0$, $\lim_{x\to c} g(x)=-2$, and $\lim_{x\to c} h(x)=7$. Find $\displaystyle\lim_{x\to c} \frac{f(x)^2}{g(x)}+h(x)$.
+\item Suppose $\lim_{x\to c} f(x)=5$, $\lim_{x\to c} g(x)=1$, and $\lim_{x\to c} h(x)=-1$. Find $\displaystyle\lim_{x\to c} \frac{1}{f(x)+g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-4$, $\lim_{x\to c} g(x)=3$, and $\lim_{x\to c} h(x)=6$. Find $\displaystyle\lim_{x\to c} \frac{f(x)+g(x)}{f(x)-g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=6$, $\lim_{x\to c} g(x)=-1$, and $\lim_{x\to c} h(x)=2$. Find $\displaystyle\lim_{x\to c} \sqrt{h(x)+f(x)^2}$.
+\item Suppose $\lim_{x\to c} f(x)=1$, $\lim_{x\to c} g(x)=4$, and $\lim_{x\to c} h(x)=-3$. Find $\displaystyle\lim_{x\to c} \frac{h(x)^2-f(x)^2}{g(x)}$.
+\item Suppose $\lim_{x\to c} f(x)=-2$, $\lim_{x\to c} g(x)=-5$, and $\lim_{x\to c} h(x)=8$. Find $\displaystyle\lim_{x\to c} \frac{f(x)+1}{g(x)-1}$.
+\item Suppose $\lim_{x\to c} f(x)=7$, $\lim_{x\to c} g(x)=2$, and $\lim_{x\to c} h(x)=3$. Find $\displaystyle\lim_{x\to c} \frac{h(x)+g(x)}{f(x)^2+2}$.
+\end{enumerate}
+\end{multicols}
+
+\backmatter
+\chapter*{Before Declaring the Limit Complete}
+\addcontentsline{toc}{chapter}{Before Declaring the Limit Complete}
+\begin{itemize}[leftmargin=*]
+\item I checked whether direct substitution is allowed.
+\item I factored before cancelling in any $0/0$ rational limit.
+\item I cancelled only common factors, never separate terms.
+\item I used the left-hand rule for $x\to a^-$ and the right-hand rule for $x\to a^+$.
+\item I concluded DNE only after comparing the two one-sided limits.
+\item I avoided the quotient and reciprocal laws when the denominator limit is $0$.
+\end{itemize}
+\end{document}
